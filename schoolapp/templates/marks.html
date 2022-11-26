@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME PAGE</title>
+
+</head>
+
+
+
+<body>
+</br>
+<div>
+  <h2>MARKS</h2>
+  <hr>
+<div>
+  <table class="table table-sm">
+    <tr>
+        <th>Student Name</th>
+        <th>Units</th>
+        <th>Cat</th>
+        <th>Exam</th>
+        
+    </tr>
+    {% for a in marks %}
+      <tr>
+        <td>{{a.students}}</td>
+        <td>{{a.units}}</td>
+        <td>{{a.cat}}</td>
+        <td>{{a.exam}}</td>
+        
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+</html>
+{% endblock content %}   
+
+
